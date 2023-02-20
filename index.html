@@ -7,16 +7,13 @@
   <title>Document</title>
   <script type="module">
     import devtools from './index2.js';
+    console.log(devtools.isOpen);
     if(devtools.isOpen){
-      window.opener=null;
-      window.open('','_self');
-      window.close();
+      window.location.href="about:blank";
     }
     window.addEventListener('devtoolschange', event => {
       if(event.detail.isOpen){
-        window.opener=null;
-        window.open('','_self');
-        window.close();
+        window.location.href="about:blank";
       }
     });
   </script>
