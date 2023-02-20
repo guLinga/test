@@ -25,3 +25,12 @@ document.onkeydown = function () {
 document.oncontextmenu = function (event) {
   return false;
 }
+
+// 禁止另存为
+document.oncontextmenu=function(evt){
+  evt.preventDefault();
+}
+
+document.onselectstart=function(evt){
+ evt.preventDefault();
+};
